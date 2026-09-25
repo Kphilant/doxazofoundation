@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us — Doxazo Foundation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="./favicon.png.jpg">
+    <style>
+        .about-container {
+            max-width: 1100px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+        
+        /* Story Grid */
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-bottom: 5rem;
+        }
+        @media(max-width: 768px) {
+            .story-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .story-text h2 {
+            color: var(--primary-blue);
+            font-size: 2.2rem;
+            margin-bottom: 1.2rem;
+        }
+        .story-text p {
+            color: #555;
+            font-size: 1.05rem;
+            margin-bottom: 1.2rem;
+            line-height: 1.7;
+        }
+        .story-img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-bottom: 4px solid var(--accent-gold);
+        }
+
+        /* Mission & Vision Cards */
+        .mission-vision-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 5rem;
+        }
+        .mv-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-left: 5px solid var(--accent-gold);
+        }
+        .mv-card h3 {
+            color: var(--primary-blue);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .mv-card p {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Leadership Section */
+        .leadership-section {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        .leadership-section h2 {
+            color: var(--primary-blue);
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+        .leadership-section h2 span {
+            color: var(--accent-gold);
+        }
+        .leadership-section > p {
+            color: #666;
+            max-width: 650px;
+            margin: 0 auto 3rem auto;
+            font-size: 1.05rem;
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+        }
+        .team-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--accent-gold);
+            text-align: center;
+        }
+        .team-avatar {
+            width: 90px;
+            height: 90px;
+            background-color: var(--primary-blue);
+            color: var(--accent-gold);
+            font-size: 2rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin: 0 auto 1.2rem auto;
+            border: 2px solid var(--accent-gold);
+        }
+        .team-card h3 {
+            color: var(--primary-blue);
+            font-size: 1.2rem;
+            margin-bottom: 0.3rem;
+        }
+        .team-card .role {
+            color: var(--accent-gold);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+            text-transform: uppercase;
+        }
+        .team-card p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <div class="nav-container">
+             <div class="nav-container">
+            <div style="display: flex; align-items:initial; gap: 10px;">
+    <img src="./favicon.png.jpg" alt="Doxazo Logo" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 2px solid #D4AF37;">
+    <span class="logo">DOXAZO FOUNDATION</span>
+</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="programs.html">Programs & Mandates</a></li>
+                <li><a href="gallery.html">Gallery & Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="get-involved.html" class="btn-donate-nav">Donate / Volunteer</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>About Doxazo Foundation</h1>
+        <p>Discover our history, our driving mission, and the dedicated team behind our community transformations.</p>
+    </section>
+
+    <!-- Main Content Area -->
+    <div class="about-container">
+
+        <!-- Our Story Section -->
+        <div class="story-grid">
+            <div class="story-text">
+                <h2>Our Story & Background</h2>
+                <p>Founded with a deep commitment to societal upliftment, Doxazo Foundation emerged from a shared vision to bridge critical gaps in education, youth development, and grassroots community welfare.</p>
+                <p>We recognized that brilliant minds often go unrealized simply due to financial constraints, and that young people need both professional guidance and spiritual grounding to thrive. Today, we stand as a beacon of hope, driving sustainable impact and empowering families across generations.</p>
+            </div>
+            <div>
+                <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=600&q=80" alt="Foundation Teamwork" class="story-img">
+            </div>
+        </div>
+
+        <!-- Mission & Vision Grid -->
+        <div class="mission-vision-grid">
+            <div class="mv-card">
+                <h3>Our Core Mission</h3>
+                <p>To foster holistic spiritual growth, drive accessible educational advancement, and provide strategic professional development and resources that empower individuals and elevate communities.</p>
+            </div>
+            <div class="mv-card">
+                <h3>Our Vision for the Future</h3>
+                <p>To become a leading catalyst for sustainable transformation across Africa, building empowered generations equipped to lead with purpose, integrity, and excellence.</p>
+            </div>
+        </div>
+
+        <!-- Leadership Section -->
+        <div class="team-card">
+    <div style="width: 110px; height: 110px; margin: 0 auto 1.2rem auto; border-radius: 50%; overflow: hidden; border: 3px solid var(--accent-gold); box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <img src="./df prez.png" alt="Leader Name" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+    <h3>David Sapatey</h3>
+    <div class="role">PRESIDENT AND EXECUTIVE MEMBER</div>
+    <p> Provides visionary leadership and strategic 
+direction to drive the foundation's core mission and long-term objectives. 
+Represents the organization at the highest levels,
+ fostering crucial partnerships and guiding overall
+  executive governance. Collaborates with leadership to formulate 
+  foundational policies, oversee strategic initiatives, and ensure 
+  institutional growth. Contributes governance expertise and active 
+  oversight across key operational departments to maximize organizational impact. </p>
+    <div class="team-card">
+    <div style="width: 110px; height: 110px; margin: 0 auto 1.2rem auto; border-radius: 50%; overflow: hidden; border: 3px solid var(--accent-gold); box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <img src="./df pro.png" alt="Leader Name" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+    <h3>Joseph Akrofi Ocansey</h3>
+    <div class="role">PUBLIC RELATIONS OFFICER AND SCHOLARSHIP COORINATOR </div>
+    <p>Develops and executes comprehensive communication strategies to
+        enhance the foundation’s public image and brand visibility. Manages media relations, digital content, 
+        and public outreach to effectively tell our story of impact.
+Manages the entire lifecycle of educational grants, from application 
+intake and rigorous vetting to selection and disbursement. 
+Serves as the primary liaison between the foundation, 
+sponsored students, and partner educational institutions.</p>
+    <div class="team-card">
+    <div style="width: 110px; height: 110px; margin: 0 auto 1.2rem auto; border-radius: 50%; overflow: hidden; border: 3px solid var(--accent-gold); box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <img src="./df protocol copy.png" alt="Leader Name" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+    <h3>Faustina Ofosu Appiah</h3>
+    <div class="role">HEAD OF PROTOCOL AND TREASURER</div>
+    <p>Manages executive schedules, VIP relations, advancement
+         high-level stakeholder engagements with strict discretion. 
+         Coordinates seamless protocol and
+         logistical execution for all major foundation events and meetings.
+Oversees the foundation's financial health, ensuring transparency,
+ accuracy, and regulatory compliance in all accounting matters.
+  Manages budgeting, grant disbursement, and financial reporting 
+  to the Executive Board and donors.</p>
+    <div class="team-card">
+    <div style="width: 110px; height: 110px; margin: 0 auto 1.2rem auto; border-radius: 50%; overflow: hidden; border: 3px solid var(--accent-gold); box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <img src="./df sec.png" alt="Leader Name" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+    <h3>Servant DA Prosper</h3>
+    <div class="role">GENERAL SECRETARY </div>
+    <p>Manages the foundational administration, official correspondence,
+         and comprehensive record-keeping for the executive board. Ensures 
+         seamless communication across all departments and 
+        supports strategic planning and meeting coordination.</p>
+    <div class="team-card">
+    <div style="width: 110px; height: 110px; margin: 0 auto 1.2rem auto; border-radius: 50%; overflow: hidden; border: 3px solid var(--accent-gold); box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <img src="./df program.png" alt="Leader Name" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+    <h3>Cephas Ocansey</h3>
+    <div class="role">ORGANIZER AND PROGRAM COORDINATOR</div>
+    <p>Coordinates the seamless logistical planning and execution of all
+ foundation field activities, community outreaches, and special events. 
+ Manages ground-level operations, equipment setup, 
+and volunteer deployment to ensure every program runs efficiently.
+Designs, implements, and evaluates the foundation's core initiatives, 
+aligning them with our strategic vision and mission. Oversees daily program
+activities, tracks impact metrics, and fosters collaborative partnerships 
+to maximize community benefit.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div style="max-width: 600px; margin: 3rem auto; padding: 0 1rem; text-align: center;">
+    <h2 style="color: #0A1128; font-size: 1.8rem; margin-bottom: 2rem;">Founding <span style="color: #D4AF37;">Members</span></h2>
+    
+    <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+        
+        <!-- Member 1 -->
+        <div style="flex: 1; min-width: 180px; max-width: 220px; background: #ffffff; padding: 1.2rem; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-bottom: 3px solid #D4AF37;">
+            <div style="width: 90px; height: 90px; margin: 0 auto 0.8rem auto; border-radius: 50%; overflow: hidden; border: 2px solid #D4AF37;">
+                <img src="founder1.jpg" alt="Founding Member Name" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <h4 style="color: #0A1128; font-size: 1rem; margin-bottom: 0.3rem;">[Member's Name]</h4>
+            <p style="color: #D4AF37; font-size: 0.85rem; font-weight: 600; margin: 0;">Co-Founder</p>
+        </div>
+
+        <!-- Member 2 -->
+        <div style="flex: 1; min-width: 180px; max-width: 220px; background: #ffffff; padding: 1.2rem; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-bottom: 3px solid #D4AF37;">
+            <div style="width: 90px; height: 90px; margin: 0 auto 0.8rem auto; border-radius: 50%; overflow: hidden; border: 2px solid #D4AF37;">
+                <img src="founder2.jpg" alt="Founding Member Name" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <h4 style="color: #0A1128; font-size: 1rem; margin-bottom: 0.3rem;">[Member's Name]</h4>
+            <p style="color: #D4AF37; font-size: 0.85rem; font-weight: 600; margin: 0;">Co-Founder / Board Member</p>
+        </div>
+
+         <!-- Member 3 -->
+        <div style="flex: 1; min-width: 180px; max-width: 220px; background: #ffffff; padding: 1.2rem; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-bottom: 3px solid #D4AF37;">
+            <div style="width: 90px; height: 90px; margin: 0 auto 0.8rem auto; border-radius: 50%; overflow: hidden; border: 2px solid #D4AF37;">
+                <img src="founder2.jpg" alt="Founding Member Name" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <h4 style="color: #0A1128; font-size: 1rem; margin-bottom: 0.3rem;">[Member's Name]</h4>
+            <p style="color: #D4AF37; font-size: 0.85rem; font-weight: 600; margin: 0;">Co-Founder / Board Member</p>
+        </div>
+
+         <!-- Member 4 -->
+        <div style="flex: 1; min-width: 180px; max-width: 220px; background: #ffffff; padding: 1.2rem; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-bottom: 3px solid #D4AF37;">
+            <div style="width: 90px; height: 90px; margin: 0 auto 0.8rem auto; border-radius: 50%; overflow: hidden; border: 2px solid #D4AF37;">
+                <img src="founder2.jpg" alt="Founding Member Name" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <h4 style="color: #0A1128; font-size: 1rem; margin-bottom: 0.3rem;">[Member's Name]</h4>
+            <p style="color: #D4AF37; font-size: 0.85rem; font-weight: 600; margin: 0;">Co-Founder / Board Member</p>
+        </div>
+ <!-- Member 5 -->
+        <div style="flex: 1; min-width: 180px; max-width: 220px; background: #ffffff; padding: 1.2rem; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-bottom: 3px solid #D4AF37;">
+            <div style="width: 90px; height: 90px; margin: 0 auto 0.8rem auto; border-radius: 50%; overflow: hidden; border: 2px solid #D4AF37;">
+                <img src="founder2.jpg" alt="Founding Member Name" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <h4 style="color: #0A1128; font-size: 1rem; margin-bottom: 0.3rem;">[Member's Name]</h4>
+            <p style="color: #D4AF37; font-size: 0.85rem; font-weight: 600; margin: 0;">Co-Founder / Board Member</p>
+        </div>
+
+         <!-- Member 6 -->
+        <div style="flex: 1; min-width: 180px; max-width: 220px; background: #ffffff; padding: 1.2rem; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-bottom: 3px solid #D4AF37;">
+            <div style="width: 90px; height: 90px; margin: 0 auto 0.8rem auto; border-radius: 50%; overflow: hidden; border: 2px solid #D4AF37;">
+                <img src="founder2.jpg" alt="Founding Member Name" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <h4 style="color: #0A1128; font-size: 1rem; margin-bottom: 0.3rem;">[Member's Name]</h4>
+            <p style="color: #D4AF37; font-size: 0.85rem; font-weight: 600; margin: 0;">Co-Founder / Board Member</p>
+        </div>
+
+    </div>
+    
+</div>
+
+ <!-- Social Links -->
+    <div style="margin-bottom: 1.2rem; display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
+        <a href="https://facebook.com/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">Facebook</a>
+        <a href="https://instagram.com/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">Instagram</a>
+        <a href="https://twitter.com/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">Twitter / X</a>
+        <a href="https://linkedin.com/company/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">LinkedIn</a>
+   <a href="https://TikTok.com/company/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">TikTok</a>
+    </div>
+    </div>
+ <!-- QR Code Placeholder -->
+    <div>
+        <img src="./df whatsapp.JPG" alt="Doxazo Social QR Code" style="width: 80px; height: 80px; border: 2px solid #D4AF37; border-radius: 6px; padding: 3px; background: #fff;">
+        <p style="font-size: 0.8rem; color: #666; margin-top: 0.4rem;">Scan to visit our channels</p>
+    </div>
+
+</div>
+    
+<script src="script.js"></script>
+
+<footer style="background-color: #0A1128; color: #E2E8F0; text-align: center; padding: 2rem; border-top: 3px solid #D4AF37; margin-top: 4rem;">
+    <p style="margin-bottom: 0.8rem; font-size: 0.95rem;">
+        <a href="legal.html" style="color: #D4AF37; text-decoration: none; margin: 0 10px;">Legal</a> | 
+        <a href="terms.html" style="color: #D4AF37; text-decoration: none; margin: 0 10px;">Terms of Service</a>
+    </p>
+    <p style="font-size: 0.85rem; color: #94A3B8;">&copy; 2026 Doxazo Foundation. All rights reserved.</p>
+</footer>
+</body>
+</html>

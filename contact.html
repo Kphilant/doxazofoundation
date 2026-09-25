@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us � Doxazo Foundation</title>
+    <link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="favicon.png.jpg">
+    <style>
+        .contact-container {
+            max-width: 1100px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+        .contact-info h2, .contact-form-box h2 {
+            color: var(--primary-blue);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        .contact-info p {
+            color: #555;
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+        .info-item {
+            margin-bottom: 1.2rem;
+        }
+        .info-item strong {
+            color: var(--primary-blue);
+            display: block;
+            margin-bottom: 0.2rem;
+        }
+        .info-item span {
+            color: #666;
+        }
+        /* Form Styling */
+        .contact-form-box {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--accent-gold);
+        }
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+        .form-group label {
+            display: block;
+            color: var(--primary-blue);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <div class="nav-container">
+              <div class="nav-container">
+             <div class="nav-container">
+            <div style="display: flex; align-items:initial; gap: 10px;">
+    <img src="./favicon.png.jpg" alt="Doxazo Logo" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 2px solid #D4AF37;">
+    <span class="logo">DOXAZO FOUNDATION</span>
+</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="programs.html">Programs & Mandates</a></li>
+                <li><a href="gallery.html">Gallery & Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="get-involved.html" class="btn-donate-nav">Donate / Volunteer</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Contact Doxazo Foundation</h1>
+        <p>We would love to hear from you. Reach out to partner, volunteer, or inquire about our programs.</p>
+    </section>
+
+    <!-- Main Content Area -->
+    <div class="contact-container">
+
+        <!-- Contact Information Side -->
+        <div class="contact-info">
+            <h2>Get in Touch</h2>
+            <p>Have questions about our scholarship programs, want to participate in our annual worship concert, or interested in partnering with us? Contact us using the details below or send us a message.</p>
+            
+            <div class="info-item">
+                <strong>Location:</strong>
+                <span>Sege-Ada,Ghana</span>
+            </div>
+            <div class="info-item">
+                <strong>Email Address:</strong>
+                <span><a href="">info@doxazofoundation.org</a></span>
+            </div>
+            <div class="info-item">
+                <strong>Phone Number:</strong>
+                <span>+233 247-64-2733</span>
+            </div>
+            <div class="info-item">
+                <strong>Office Hours:</strong>
+                <span>Monday - Friday: 8:00 AM - 5:00 PM</span> <br>
+                <span>Saturdays - 8:00 AM - 1:00 PM
+                </span>
+            </div>
+        </div>
+
+        <!-- Contact Form Side -->
+        <div class="contact-form-box">
+            <h2>Send Us a Message</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Your Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject / Inquiry Type</label>
+                    <input type="text" id="subject" name="subject" placeholder="e.g., Scholarship Inquiry / Volunteering" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%; text-align: center; border: none; cursor: pointer;">Send Message</button>
+            </form>
+        </div>
+
+    </div>
+<script src="script.js"></script>
+
+ <!-- Social Links -->
+    <div style="margin-bottom: 1.2rem; display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
+        <a href="https://facebook.com/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">Facebook</a>
+        <a href="https://instagram.com/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">Instagram</a>
+        <a href="https://twitter.com/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">Twitter / X</a>
+        <a href="https://linkedin.com/company/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">LinkedIn</a>
+   <a href="https://TikTok.com/company/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">TikTok</a>
+    </div>
+    </div>
+ <!-- QR Code Placeholder -->
+    <div>
+        <img src="./df whatsapp.JPG" alt="Doxazo Social QR Code" style="width: 80px; height: 80px; border: 2px solid #D4AF37; border-radius: 6px; padding: 3px; background: #fff;">
+        <p style="font-size: 0.8rem; color: #666; margin-top: 0.4rem;">Scan to visit our channels</p>
+    </div>
+
+</div>
+
+<footer style="background-color: #0A1128; color: #E2E8F0; text-align: center; padding: 2rem; border-top: 3px solid #D4AF37; margin-top: 4rem;">
+    <p style="margin-bottom: 0.8rem; font-size: 0.95rem;">
+        <a href="legal.html" style="color: #D4AF37; text-decoration: none; margin: 0 10px;">Legal</a> | 
+        <a href="terms.html" style="color: #D4AF37; text-decoration: none; margin: 0 10px;">Terms of Service</a>
+    </p>
+    <p style="font-size: 0.85rem; color: #94A3B8;">&copy; 2026 Doxazo Foundation. All rights reserved.</p>
+</footer>
+</body>
+</html>

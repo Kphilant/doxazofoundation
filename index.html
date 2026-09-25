@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doxazo Foundation — Transforming Lives & Communities</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="favicon.png.jpg">
+    <style>
+        /* Homepage Specific Enhancements */
+        .hero-section {
+            background: linear-gradient(rgba(10, 17, 40, 0.85), rgba(10, 17, 40, 0.85)), url('https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            text-align: center;
+            padding: 6rem 2rem;
+            border-bottom: 4px solid var(--accent-gold);
+        }
+        .hero-section h1 {
+            font-size: 3rem;
+            color: var(--accent-gold);
+            margin-bottom: 1rem;
+            letter-spacing: 0.5px;
+        }
+        .hero-section p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem auto;
+            color: #E2E8F0;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Impact Counter / Stats Section */
+        .stats-bar {
+            background-color: var(--white);
+            padding: 3rem 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            max-width: 1100px;
+            margin: -3rem auto 3rem auto;
+            border-radius: 8px;
+            position: relative;
+            z-index: 10;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            text-align: center;
+            border-top: 4px solid var(--accent-gold);
+        }
+        .stat-box h3 {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 0.3rem;
+        }
+        .stat-box p {
+            color: #666;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+        }
+
+        /* Mission / Welcome Intro */
+        .home-container {
+            max-width: 1100px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-bottom: 5rem;
+        }
+        @media(max-width: 768px) {
+            .intro-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-section h1 {
+                font-size: 2.2rem;
+            }
+        }
+        .intro-text h2 {
+            color: var(--primary-blue);
+            font-size: 2.2rem;
+            margin-bottom: 1.2rem;
+        }
+        .intro-text p {
+            color: #555;
+            font-size: 1.05rem;
+            margin-bottom: 1.2rem;
+            line-height: 1.7;
+        }
+        .intro-img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-bottom: 4px solid var(--accent-gold);
+        }
+
+        /* Core Mandates Grid Preview */
+        .section-title {
+            text-align: center;
+            color: var(--primary-blue);
+            font-size: 2.2rem;
+            margin-bottom: 3rem;
+        }
+        .section-title span {
+            color: var(--accent-gold);
+        }
+        .pillars-preview {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 5rem;
+        }
+        .pillar-card {
+            background: var(--white);
+            padding: 2.5rem 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--accent-gold);
+            text-align: left;
+        }
+        .pillar-card h3 {
+            color: var(--primary-blue);
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+        .pillar-card p {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Call To Action Banner */
+        .cta-banner {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            text-align: center;
+            padding: 4rem 2rem;
+            border-radius: 8px;
+            border-left: 6px solid var(--accent-gold);
+            margin-bottom: 4rem;
+        }
+        .cta-banner h2 {
+            color: var(--accent-gold);
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+        .cta-banner p {
+            color: #E2E8F0;
+            max-width: 600px;
+            margin: 0 auto 2rem auto;
+            font-size: 1.05rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <div class="nav-container">
+            <div style="display: flex; align-items: center; gap: 10px;">
+    <img src="./favicon.png.jpg" alt="Doxazo Logo" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 2px solid #D4AF37;">
+    <span class="logo">DOXAZO FOUNDATION</span>
+</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="programs.html">Programs & Mandates</a></li>
+                <li><a href="gallery.html">Gallery & Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="get-involved.html" class="btn-donate-nav">Donate / Volunteer</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h1>Empowering Futures, Inspiring Hope</h1>
+        <p>Doxazo Foundation is dedicated to fostering spiritual growth, driving educational advancement, and creating lasting community development across Africa.</p>
+        <div class="hero-buttons">
+            <a href="get-involved.html" class="btn-primary">Support Our Mission</a>
+            <a href="programs.html" class="btn-secondary">Explore Our Programs</a>
+        </div>
+    </section>
+
+    <!-- Floating Stats Bar -->
+    <div class="stats-bar">
+        <div class="stat-box">
+            <h3 class="counter" data-target="500">0+</h3>
+            <p>Students Supported</p>
+        </div>
+        <div class="stat-box">
+            <h3 class="counter" data-target="15">0+</h3>
+            <p>Communities Reached</p>
+        </div>
+        <div class="stat-box">
+            <h3 class="counter" data-target="3">3</h3>
+            <p>Annual Programs</p>
+        </div>
+        <div class="stat-box">
+            <h3 class="counter" data-target="100">100%</h3>
+            <p>Commitment</p>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="home-container">
+
+        <!-- Intro Section -->
+        <div class="intro-grid">
+            <div class="intro-text">
+                <h2>Building a Legacy of Purpose and Impact</h2>
+                <p>At Doxazo Foundation, we believe that true societal transformation happens when practical empowerment meets spiritual renewal. We work tirelessly to bridge financial gaps for students, guide the youth toward purposeful careers, and uplift grassroots communities.</p>
+                <p>Through our focused mandates, corporate partnerships, and dedicated volunteers, we are building a world-class framework for sustainable growth and empowerment.</p>
+                <a href="about.html" class="btn-primary" style="padding: 0.6rem 1.5rem; font-size: 0.95rem;">Learn More About Us</a>
+            </div>
+            <div>
+                <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80" alt="Students Learning" class="intro-img">
+            </div>
+        </div>
+
+        <!-- Core Mandates Preview -->
+        <h2 class="section-title">Our Three Core <span>Mandates</span></h2>
+        <div class="pillars-preview">
+            <div class="pillar-card">
+                <h3>1. Education & Scholarships</h3>
+                <p>Bridging financial gaps for high-performing, needy students with tuition grants, mentorship, and progressive educational standards advocacy.</p>
+                <a href="programs.html" style="color: var(--primary-blue); font-weight: bold; text-decoration: none;">Read More &rarr;</a>
+            </div>
+            <div class="pillar-card">
+                <h3>2. Youth Empowerment & Worship</h3>
+                <p>Equipping the next generation with professional career direction, leadership workshops, and spiritual renewal through our annual worship concerts.</p>
+                <a href="programs.html" style="color: var(--primary-blue); font-weight: bold; text-decoration: none;">Read More &rarr;</a>
+            </div>
+            <div class="pillar-card">
+                <h3>3. Community Growth</h3>
+                <p>Executing grassroots outreach projects, family support initiatives, and collaborative town halls to build resilient communities.</p>
+                <a href="programs.html" style="color: var(--primary-blue); font-weight: bold; text-decoration: none;">Read More &rarr;</a>
+            </div>
+        </div>
+
+        <!-- Call To Action Banner -->
+        <div class="cta-banner">
+            <h2>Ready to Make a Meaningful Difference?</h2>
+            <p>Whether through financial partnership, mentoring, or volunteering at our upcoming events, your support creates ripple effects of transformation.</p>
+            <a href="get-involved.html" class="btn-primary">Get Involved Today</a>
+        </div>
+
+    </div>
+
+    <!-- Auto-Counting Script -->
+    <script>
+        const counters = document.querySelectorAll('.counter');
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText.replace('+', '').replace('%', '');
+                const increment = target / 50;
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment) + (counter.getAttribute('data-target').includes('100') ? '%' : '+');
+                    setTimeout(updateCount, 40);
+                } else {
+                    counter.innerText = target + (counter.getAttribute('data-target').includes('100') ? '%' : '+');
+                }
+            };
+            updateCount();
+        });
+    </script>
+<script src="script.js"></script>
+
+<div style="text-align: center; margin: 2rem 0; padding: 1.5rem; background: rgba(212,175,55,0.05); border-radius: 8px;">
+    <p style="color: #D4AF37; font-weight: bold; margin-bottom: 1rem; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Connect & Scan With Us</p>
+    
+    <!-- Social Links -->
+    <div style="margin-bottom: 1.2rem; display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
+        <a href="https://facebook.com/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">Facebook</a>
+        <a href="https://instagram.com/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">Instagram</a>
+        <a href="https://twitter.com/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">Twitter / X</a>
+        <a href="https://linkedin.com/company/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">LinkedIn</a>
+   <a href="https://TikTok.com/company/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">TikTok</a>
+    </div>
+    </div>
+ <!-- QR Code Placeholder -->
+    <div>
+        <img src="./df whatsapp.JPG" alt="Doxazo Social QR Code" style="width: 80px; height: 80px; border: 2px solid #D4AF37; border-radius: 6px; padding: 3px; background: #fff;">
+        <p style="font-size: 0.8rem; color: #666; margin-top: 0.4rem;">Scan to visit our channels</p>
+    </div>
+
+</div>
+
+
+<footer style="background-color: #0A1128; color: #E2E8F0; text-align: center; padding: 2rem; border-top: 3px solid #D4AF37; margin-top: 4rem;">
+    <p style="margin-bottom: 0.8rem; font-size: 0.95rem;">
+        <a href="legal.html" style="color: #D4AF37; text-decoration: none; margin: 0 10px;">Legal</a> | 
+        <a href="terms.html" style="color: #D4AF37; text-decoration: none; margin: 0 10px;">Terms of Service</a>
+    </p>
+    <p style="font-size: 0.85rem; color: #94A3B8;">&copy; 2026 Doxazo Foundation. All rights reserved.</p>
+</footer>
+</body>
+</html>
