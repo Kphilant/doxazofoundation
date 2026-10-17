@@ -35,20 +35,40 @@
         .program-block {
             background: var(--white);
             padding: 3rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            margin-bottom: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+            margin-bottom: 3.5rem;
             border-left: 6px solid var(--accent-gold);
             display: grid;
             grid-template-columns: 2fr 1fr;
             gap: 2.5rem;
             align-items: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .program-block:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(10, 17, 40, 0.1);
         }
         @media(max-width: 768px) {
             .program-block {
                 grid-template-columns: 1fr;
                 padding: 2rem;
             }
+        }
+        .program-badge {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.15);
+            color: #0A1128;
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.8rem;
+            border: 1px solid rgba(212, 175, 55, 0.3);
         }
         .program-content h3 {
             color: var(--primary-blue);
@@ -83,11 +103,15 @@
         }
         .program-img-box img {
             width: 100%;
-            height: 250px;
+            height: 260px;
             object-fit: cover;
             border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             border-bottom: 3px solid var(--accent-gold);
+            transition: transform 0.4s ease;
+        }
+        .program-block:hover .program-img-box img {
+            transform: scale(1.03);
         }
     </style>
 </head>
@@ -95,14 +119,12 @@
 
     <!-- Navigation Bar -->
     <header>
-        <div class="nav-container">
-              <div class="nav-container">
-             <div class="nav-container">
-            <div style="display: flex; align-items:initial; gap: 10px;">
-    <img src="./favicon.png.jpg" alt="Doxazo Logo" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 2px solid #D4AF37;">
-    <span class="logo">DOXAZO FOUNDATION</span>
-</div>
-            <ul class="nav-links">
+        <div class="nav-container" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="./favicon.png.jpg" alt="Doxazo Logo" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 2px solid #D4AF37;">
+                <span class="logo" style="font-weight: bold; color: #D4AF37; font-size: 1.1rem; letter-spacing: 0.5px;">DOXAZO FOUNDATION</span>
+            </div>
+            <ul class="nav-links" style="display: flex; gap: 1.5rem; list-style: none; align-items: center;">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="programs.html">Programs & Mandates</a></li>
@@ -114,9 +136,9 @@
     </header>
 
     <!-- Page Header -->
-    <section class="page-header">
-        <h1>Our Core Programs & Mandates</h1>
-        <p>Explore how we drive education, youth empowerment, and grassroots community transformation.</p>
+    <section class="page-header" style="background: linear-gradient(rgba(10, 17, 40, 0.85), rgba(10, 17, 40, 0.85)), url('https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; color: white; text-align: center; padding: 5rem 2rem; border-bottom: 4px solid #D4AF37;">
+        <h1 style="font-size: 2.8rem; color: #D4AF37; margin-bottom: 1rem;">Our Core Programs & Mandates</h1>
+        <p style="font-size: 1.15rem; max-width: 650px; margin: 0 auto; color: #E2E8F0;">Explore how we drive education, youth empowerment, and grassroots community transformation.</p>
     </section>
 
     <!-- Main Content Area -->
@@ -130,7 +152,8 @@
         <!-- Mandate 1 -->
         <div class="program-block">
             <div class="program-content">
-                <h3>1. Education & Scholarships</h3>
+                <span class="program-badge">Pillar 01</span>
+                <h3>Education & Scholarships</h3>
                 <p>Education is the bedrock of societal development. At Doxazo Foundation, we bridge financial gaps for brilliant but financially needy students, giving them an equal opportunity to excel academically and realize their full potential.</p>
                 <p>Beyond direct student scholarships, we actively collaborate to shape educational standards and advocate for progressive development across the educational sector.</p>
                 <ul class="program-features">
@@ -147,8 +170,9 @@
         <!-- Mandate 2 -->
         <div class="program-block">
             <div class="program-content">
-                <h3>2. Youth Empowerment & Spiritual Growth</h3>
-                <p>We believe that developing the youth requires a balanced approach—equipping them with practical career direction while nurturing their spiritual foundation. Through our targeted programs and flagship events, we inspire the next generation of leaders.</p>
+                <span class="program-badge">Pillar 02</span>
+                <h3>Youth Empowerment & Spiritual Growth</h3>
+                <p>We believe that developing the youth requires a balanced approach—equipping them with practical career direction while nurturing their spiritual foundation. Through our targeted programs and flagship events, we inspire the next generation for leadership.</p>
                 <p>A major highlight of this mandate is our <strong>Annual Worship Concert</strong>, a powerful platform that brings youth together for spiritual renewal, community bonding, and corporate worship.</p>
                 <ul class="program-features">
                     <li>Comprehensive career guidance, workshops, and professional mentorship.</li>
@@ -164,7 +188,8 @@
         <!-- Mandate 3 -->
         <div class="program-block">
             <div class="program-content">
-                <h3>3. Community Growth & Engagement</h3>
+                <span class="program-badge">Pillar 03</span>
+                <h3>Community Growth & Engagement</h3>
                 <p>True change happens at the grassroots level. Our community engagement programs focus on direct outreach, listening to local needs, and implementing sustainable solutions that uplift families and build resilient communities.</p>
                 <p>We work hand-in-hand with community leaders to ensure our outreach efforts create lasting, measurable value.</p>
                 <ul class="program-features">
@@ -179,31 +204,60 @@
         </div>
 
     </div>
-<script src="script.js"></script>
 
- <!-- Social Links -->
-    <div style="margin-bottom: 1.2rem; display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
-        <a href="https://facebook.com/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">Facebook</a>
-        <a href="https://instagram.com/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">Instagram</a>
-        <a href="https://twitter.com/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">Twitter / X</a>
-        <a href="https://linkedin.com/company/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">LinkedIn</a>
-   <a href="https://TikTok.com/company/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">TikTok</a>
-    </div>
-    </div>
- <!-- QR Code Placeholder -->
-    <div>
-        <img src="./df whatsapp.JPG" alt="Doxazo Social QR Code" style="width: 80px; height: 80px; border: 2px solid #D4AF37; border-radius: 6px; padding: 3px; background: #fff;">
-        <p style="font-size: 0.8rem; color: #666; margin-top: 0.4rem;">Scan to visit our channels</p>
+    <!-- Connect & Scan Section -->
+    <div style="text-align: center; margin: 3rem auto; padding: 2rem; background: rgba(212,175,55,0.05); border-radius: 8px; max-width: 600px;">
+        <p style="color: #D4AF37; font-weight: bold; margin-bottom: 1rem; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Connect & Scan With Us</p>
+        
+        <!-- Social Links -->
+        <div style="margin-bottom: 1.5rem; display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
+            <a href="https://facebook.com/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">Facebook</a>
+            <a href="https://linkedin.com/company/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">LinkedIn</a>
+            <a href="https://TikTok.com/company/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">TikTok</a>
+        </div>
+        
+        <!-- QR Code Placeholder -->
+        <div>
+            <img src="./df whatsapp.JPG" alt="Doxazo Social QR Code" style="width: 80px; height: 80px; border: 2px solid #D4AF37; border-radius: 6px; padding: 3px; background: #fff;">
+            <p style="font-size: 0.8rem; color: #666; margin-top: 0.4rem;">Scan to visit our channels</p>
+        </div>
     </div>
 
-</div>
+<!-- Sponsors & Partners Linear Motion Section -->
+    <section class="partners-section">
+        <div class="partners-header">
+            <h3>Our Trusted <span>Sponsors & Partners</span></h3>
+            <p style="color: #666; font-size: 0.95rem; margin-top: 0.4rem;">Collaborating to build lasting community transformation.</p>
+        </div>
 
-<footer style="background-color: #0A1128; color: #E2E8F0; text-align: center; padding: 2rem; border-top: 3px solid #D4AF37; margin-top: 4rem;">
-    <p style="margin-bottom: 0.8rem; font-size: 0.95rem;">
-        <a href="legal.html" style="color: #D4AF37; text-decoration: none; margin: 0 10px;">Legal</a> | 
-        <a href="terms.html" style="color: #D4AF37; text-decoration: none; margin: 0 10px;">Terms of Service</a>
-    </p>
-    <p style="font-size: 0.85rem; color: #94A3B8;">&copy; 2026 Doxazo Foundation. All rights reserved.</p>
-</footer>
+        <div class="slider-container">
+            <div class="slider-track">
+                <!-- Set 1 of Partners -->
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 1]</span></div>
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 2]</span></div>
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 3]</span></div>
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 4]</span></div>
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 5]</span></div>
+
+                <!-- Set 2 (Duplicate for infinite looping) -->
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 1]</span></div>
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 2]</span></div>
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 3]</span></div>
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 4]</span></div>
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 5]</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background-color: #0A1128; color: #E2E8F0; text-align: center; padding: 2rem; border-top: 3px solid #D4AF37; margin-top: 4rem;">
+        <p style="margin-bottom: 0.8rem; font-size: 0.95rem;">
+            <a href="legal.html" style="color: #D4AF37; text-decoration: none; margin: 0 10px;">Legal</a> | 
+            <a href="terms.html" style="color: #D4AF37; text-decoration: none; margin: 0 10px;">Terms of Service</a>
+        </p>
+        <p style="font-size: 0.85rem; color: #94A3B8;">&copy; 2026 Doxazo Foundation. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
