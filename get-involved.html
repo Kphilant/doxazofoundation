@@ -16,7 +16,7 @@
             text-align: center;
             margin: 0 auto 4rem auto;
             color: #555;
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             max-width: 750px;
             line-height: 1.7;
         }
@@ -29,66 +29,85 @@
         .action-card {
             background: var(--white);
             padding: 3rem 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            border-top: 4px solid var(--accent-gold);
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+            border-top: 5px solid var(--accent-gold);
             text-align: center;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .action-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(10, 17, 40, 0.1);
         }
         .action-card h3 {
             color: var(--primary-blue);
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             margin-bottom: 1rem;
+            font-weight: 700;
         }
         .action-card p {
             color: #666;
-            font-size: 0.98rem;
+            font-size: 1rem;
             margin-bottom: 2rem;
             line-height: 1.6;
         }
         .bank-details-box {
             background: var(--primary-blue);
             color: var(--white);
-            padding: 3rem;
-            border-radius: 8px;
-            border-left: 6px solid var(--accent-gold);
+            padding: 3.5rem;
+            border-radius: 16px;
+            border-left: 8px solid var(--accent-gold);
             margin-top: 4rem;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(10, 17, 40, 0.15);
         }
         .bank-details-box h3 {
             color: var(--accent-gold);
-            font-size: 2rem;
+            font-size: 2.2rem;
             margin-bottom: 1rem;
+            font-weight: 700;
         }
         .bank-details-box p {
-            margin-bottom: 0.8rem;
-            font-size: 1.05rem;
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+            color: #E2E8F0;
         }
         .bank-info-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1.5rem;
-            margin-top: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 2.5rem;
         }
         .bank-item {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 1.2rem;
-            border-radius: 6px;
-            border: 1px solid rgba(212,175,55,0.2);
+            background: rgba(255, 255, 255, 0.06);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid rgba(212,175,55,0.25);
+            backdrop-filter: blur(4px);
         }
         .bank-item strong {
             color: var(--accent-gold);
             display: block;
-            margin-bottom: 0.3rem;
-            font-size: 0.9rem;
+            margin-bottom: 0.4rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
+            letter-spacing: 1px;
         }
         .bank-item span {
-            color: #E2E8F0;
-            font-size: 1.05rem;
-            font-weight: 500;
+            color: #ffffff;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        .donation-cta-box {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px dashed var(--accent-gold);
+            margin-top: 2rem;
         }
     </style>
 </head>
@@ -96,14 +115,12 @@
 
     <!-- Navigation Bar -->
     <header>
-        <div class="nav-container">
-              <div class="nav-container">
-             <div class="nav-container">
-            <div style="display: flex; align-items:initial; gap: 10px;">
-    <img src="./favicon.png.jpg" alt="Doxazo Logo" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 2px solid #D4AF37;">
-    <span class="logo">DOXAZO FOUNDATION</span>
-</div>
-            <ul class="nav-links">
+        <div class="nav-container" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="./favicon.png.jpg" alt="Doxazo Logo" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 2px solid #D4AF37;">
+                <span class="logo" style="font-weight: bold; color: #D4AF37; font-size: 1.1rem; letter-spacing: 0.5px;">DOXAZO FOUNDATION</span>
+            </div>
+            <ul class="nav-links" style="display: flex; gap: 1.5rem; list-style: none; align-items: center;">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="programs.html">Programs & Mandates</a></li>
@@ -115,9 +132,9 @@
     </header>
 
     <!-- Page Header -->
-    <section class="page-header">
-        <h1>Get Involved & Support Our Mission</h1>
-        <p>Your contribution helps us provide scholarships, empower youth, and transform communities.</p>
+    <section class="page-header" style="background: linear-gradient(rgba(10, 17, 40, 0.85), rgba(10, 17, 40, 0.85)), url('https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; color: white; text-align: center; padding: 5rem 2rem; border-bottom: 4px solid #D4AF37;">
+        <h1 style="font-size: 2.8rem; color: #D4AF37; margin-bottom: 1rem;">Get Involved & Support Our Mission</h1>
+        <p style="font-size: 1.15rem; max-width: 650px; margin: 0 auto; color: #E2E8F0;">Your contribution helps us provide scholarships, empower youth, and transform communities.</p>
     </section>
 
     <!-- Main Content Area -->
@@ -132,7 +149,7 @@
                     <h3>Make a Donation</h3>
                     <p>Support our scholarship funds, youth development workshops, and grassroots community outreaches with a financial gift.</p>
                 </div>
-                <a href="#banking" class="btn-primary" style="padding: 0.7rem 1.5rem; font-size: 0.95rem;">View Payment Details</a>
+                <a href="#banking" class="btn-primary" style="padding: 0.8rem 1.5rem; font-size: 0.95rem; border-radius: 6px; text-align: center;">View Payment Details</a>
             </div>
 
             <div class="action-card">
@@ -140,7 +157,7 @@
                     <h3>Partner With Us</h3>
                     <p>Are you a corporate body, church, or organization? Collaborate with Doxazo Foundation to scale our impact across Africa.</p>
                 </div>
-                <a href="contact.html" class="btn-primary" style="padding: 0.7rem 1.5rem; font-size: 0.95rem;">Become a Partner</a>
+                <a href="contact.html" class="btn-primary" style="padding: 0.8rem 1.5rem; font-size: 0.95rem; border-radius: 6px; text-align: center;">Become a Partner</a>
             </div>
 
             <div class="action-card">
@@ -148,14 +165,14 @@
                     <h3>Volunteer With Us</h3>
                     <p>Lend your time, skills, or professional expertise to mentor youth, assist at events, or participate in community drives.</p>
                 </div>
-                <a href="contact.html" class="btn-primary" style="padding: 0.7rem 1.5rem; font-size: 0.95rem;">Sign Up to Volunteer</a>
+                <a href="contact.html" class="btn-primary" style="padding: 0.8rem 1.5rem; font-size: 0.95rem; border-radius: 6px; text-align: center;">Sign Up to Volunteer</a>
             </div>
         </div>
 
         <!-- Banking / Mobile Money Box -->
         <div id="banking" class="bank-details-box">
             <h3>Direct Contribution Channels</h3>
-            <p>You can support Doxazo Foundation securely through our official account channels:</p>
+            <p>You can support Doxazo Foundation securely through our official bank and automated mobile money channels:</p>
             
             <div class="bank-info-grid">
                 <div class="bank-item">
@@ -170,65 +187,95 @@
                     <strong>Account Number</strong>
                     <span>[Insert Account Number Here]</span>
                 </div>
-
-<!-- Automated MoMo Donation Button -->
-<button onclick="payWithMoMo()" style="background-color: #D4AF37; color: #0A1128; border: none; padding: 1rem 2rem; font-size: 1rem; font-weight: bold; border-radius: 4px; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-    Donate via Mobile Money (Automated)
-</button>
-
-<!-- Payment Gateway Script Integration -->
-<script src="https://js.paystack.co/v1/inline.js"></script>
-<script>
-    function payWithMoMo() {
-        let handler = PaystackPop.setup({
-            key: 'pk_live_your_actual_public_key_here', // Replace with your live gateway public key
-            email: 'donor@doxazofoundation.org',
-            amount: 5000, // Amount in minor units (e.g., 5000 = 50.00 currency units)
-            currency: 'GHS', // Change to your local currency code (e.g., GHS, NGN)
-            channels: ['mobile_money'],
-            callback: function(response) {
-                alert('Payment complete! Reference: ' + response.reference);
-                // Code here runs when payment is successful
-            },
-            onClose: function() {
-                alert('Transaction window closed.');
-            }
-        });
-        handler.openIframe();
-    }
-</script>                
             </div>
 
-            <p style="margin-top: 2rem; font-size: 0.92rem; color: #CBD5E1; line-height: 1.5;"><em>Please use your full name as the payment reference or contact us via our contact page after making a transfer so we can properly acknowledge your generous support.</em></p>
+            <!-- Automated MoMo Donation Box -->
+            <div class="donation-cta-box">
+                <p style="margin-bottom: 1rem; font-weight: 600; color: #fff;">Prefer instant automated mobile money or card processing?</p>
+                <button onclick="payWithMoMo()" style="background-color: #D4AF37; color: #0A1128; border: none; padding: 1rem 2.5rem; font-size: 1.05rem; font-weight: bold; border-radius: 6px; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: transform 0.2s ease;">
+                    Donate via Mobile Money / Card
+                </button>
+            </div>
+
+            <!-- Payment Gateway Script Integration -->
+            <script src="https://js.paystack.co/v1/inline.js"></script>
+            <script>
+                function payWithMoMo() {
+                    let handler = PaystackPop.setup({
+                        key: 'pk_live_your_actual_public_key_here', // Replace with your live gateway public key
+                        email: 'donor@doxazofoundation.org',
+                        amount: 5000, // Amount in minor units (e.g., 5000 = 50.00 currency units)
+                        currency: 'GHS', // Change to your local currency code
+                        channels: ['mobile_money', 'card'],
+                        callback: function(response) {
+                            alert('Payment complete! Reference: ' + response.reference);
+                        },
+                        onClose: function() {
+                            alert('Transaction window closed.');
+                        }
+                    });
+                    handler.openIframe();
+                }
+            </script>
+
+            <p style="margin-top: 2rem; font-size: 0.95rem; color: #CBD5E1; line-height: 1.6; text-align: center;"><em>Please use your full name as the payment reference or contact us via our contact page after making a transfer so we can properly acknowledge your generous support.</em></p>
         </div>
 
     </div>
-<script src="script.js"></script>
 
- <!-- Social Links -->
-    <div style="margin-bottom: 1.2rem; display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
-        <a href="https://facebook.com/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">Facebook</a>
-        <a href="https://instagram.com/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">Instagram</a>
-        <a href="https://twitter.com/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">Twitter / X</a>
-        <a href="https://linkedin.com/company/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">LinkedIn</a>
-   <a href="https://TikTok.com/company/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">TikTok</a>
-    </div>
-    </div>
- <!-- QR Code Placeholder -->
-    <div>
-        <img src="./df whatsapp.JPG" alt="Doxazo Social QR Code" style="width: 80px; height: 80px; border: 2px solid #D4AF37; border-radius: 6px; padding: 3px; background: #fff;">
-        <p style="font-size: 0.8rem; color: #666; margin-top: 0.4rem;">Scan to visit our channels</p>
+    <!-- Connect & Scan Section -->
+    <div style="text-align: center; margin: 4rem auto 2rem auto; padding: 2rem; background: rgba(212,175,55,0.05); border-radius: 8px; max-width: 600px;">
+        <p style="color: #D4AF37; font-weight: bold; margin-bottom: 1rem; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Connect & Scan With Us</p>
+        
+        <!-- Social Links -->
+        <div style="margin-bottom: 1.5rem; display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
+            <a href="https://facebook.com/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">Facebook</a>
+            <a href="https://linkedin.com/company/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">LinkedIn</a>
+            <a href="https://TikTok.com/company/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">TikTok</a>
+        </div>
+        
+        <!-- QR Code Placeholder -->
+        <div>
+            <img src="./df whatsapp.JPG" alt="Doxazo Social QR Code" style="width: 80px; height: 80px; border: 2px solid #D4AF37; border-radius: 6px; padding: 3px; background: #fff;">
+            <p style="font-size: 0.8rem; color: #666; margin-top: 0.4rem;">Scan to visit our channels</p>
+        </div>
     </div>
 
-</div>
+    <!-- Sponsors & Partners Linear Motion Section -->
+    <section class="partners-section">
+        <div class="partners-header">
+            <h3>Our Trusted <span>Sponsors & Partners</span></h3>
+            <p style="color: #666; font-size: 0.95rem; margin-top: 0.4rem;">Collaborating to build lasting community transformation.</p>
+        </div>
 
-<footer style="background-color: #0A1128; color: #E2E8F0; text-align: center; padding: 2rem; border-top: 3px solid #D4AF37; margin-top: 4rem;">
-    <p style="margin-bottom: 0.8rem; font-size: 0.95rem;">
-        <a href="legal.html" style="color: #D4AF37; text-decoration: none; margin: 0 10px;">Legal</a> | 
-        <a href="terms.html" style="color: #D4AF37; text-decoration: none; margin: 0 10px;">Terms of Service</a>
-    </p>
-    <p style="font-size: 0.85rem; color: #94A3B8;">&copy; 2026 Doxazo Foundation. All rights reserved.</p>
-</footer>
+        <div class="slider-container">
+            <div class="slider-track">
+                <!-- Set 1 of Partners -->
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 1]</span></div>
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 2]</span></div>
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 3]</span></div>
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 4]</span></div>
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 5]</span></div>
+
+                <!-- Set 2 (Duplicate for infinite looping) -->
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 1]</span></div>
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 2]</span></div>
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 3]</span></div>
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 4]</span></div>
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 5]</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background-color: #0A1128; color: #E2E8F0; text-align: center; padding: 2rem; border-top: 3px solid #D4AF37; margin-top: 4rem;">
+        <p style="margin-bottom: 0.8rem; font-size: 0.95rem;">
+            <a href="legal.html" style="color: #D4AF37; text-decoration: none; margin: 0 10px;">Legal</a> | 
+            <a href="terms.html" style="color: #D4AF37; text-decoration: none; margin: 0 10px;">Terms of Service</a>
+        </p>
+        <p style="font-size: 0.85rem; color: #94A3B8;">&copy; 2026 Doxazo Foundation. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
-
 </html>
