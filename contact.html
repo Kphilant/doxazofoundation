@@ -3,49 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us � Doxazo Foundation</title>
+    <title>Contact Us — Doxazo Foundation</title>
     <link rel="stylesheet" href="style.css">
-<link rel="icon" type="image/png" href="favicon.png.jpg">
+    <link rel="icon" type="image/png" href="favicon.png.jpg">
     <style>
         .contact-container {
             max-width: 1100px;
-            margin: 3rem auto;
+            margin: 4rem auto;
             padding: 0 2rem;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 3.5rem;
+            align-items: flex-start;
+        }
+        @media(max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        .contact-info {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+            border-left: 6px solid var(--accent-gold);
         }
         .contact-info h2, .contact-form-box h2 {
             color: var(--primary-blue);
             font-size: 1.8rem;
             margin-bottom: 1rem;
+            font-weight: 700;
         }
         .contact-info p {
             color: #555;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
             font-size: 1.05rem;
+            line-height: 1.7;
         }
         .info-item {
-            margin-bottom: 1.2rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            flex-direction: column;
         }
         .info-item strong {
             color: var(--primary-blue);
-            display: block;
-            margin-bottom: 0.2rem;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.3rem;
         }
-        .info-item span {
+        .info-item span, .info-item a {
             color: #666;
+            font-size: 1.05rem;
+            text-decoration: none;
+            transition: color 0.2s ease;
         }
+        .info-item a:hover {
+            color: var(--accent-gold);
+        }
+        
         /* Form Styling */
         .contact-form-box {
             background: var(--white);
             padding: 2.5rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            border-top: 4px solid var(--accent-gold);
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+            border-top: 5px solid var(--accent-gold);
         }
         .form-group {
-            margin-bottom: 1.2rem;
+            margin-bottom: 1.5rem;
         }
         .form-group label {
             display: block;
@@ -56,15 +82,17 @@
         }
         .form-group input, .form-group textarea {
             width: 100%;
-            padding: 0.75rem;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+            padding: 0.85rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
             font-size: 1rem;
             font-family: inherit;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
         }
         .form-group input:focus, .form-group textarea:focus {
             outline: none;
             border-color: var(--accent-gold);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
         }
     </style>
 </head>
@@ -72,14 +100,12 @@
 
     <!-- Navigation Bar -->
     <header>
-        <div class="nav-container">
-              <div class="nav-container">
-             <div class="nav-container">
-            <div style="display: flex; align-items:initial; gap: 10px;">
-    <img src="./favicon.png.jpg" alt="Doxazo Logo" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 2px solid #D4AF37;">
-    <span class="logo">DOXAZO FOUNDATION</span>
-</div>
-            <ul class="nav-links">
+        <div class="nav-container" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="./favicon.png.jpg" alt="Doxazo Logo" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 2px solid #D4AF37;">
+                <span class="logo" style="font-weight: bold; color: #D4AF37; font-size: 1.1rem; letter-spacing: 0.5px;">DOXAZO FOUNDATION</span>
+            </div>
+            <ul class="nav-links" style="display: flex; gap: 1.5rem; list-style: none; align-items: center;">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="programs.html">Programs & Mandates</a></li>
@@ -91,9 +117,9 @@
     </header>
 
     <!-- Page Header -->
-    <section class="page-header">
-        <h1>Contact Doxazo Foundation</h1>
-        <p>We would love to hear from you. Reach out to partner, volunteer, or inquire about our programs.</p>
+    <section class="page-header" style="background: linear-gradient(rgba(10, 17, 40, 0.85), rgba(10, 17, 40, 0.85)), url('https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; color: white; text-align: center; padding: 5rem 2rem; border-bottom: 4px solid #D4AF37;">
+        <h1 style="font-size: 2.8rem; color: #D4AF37; margin-bottom: 1rem;">Contact Doxazo Foundation</h1>
+        <p style="font-size: 1.15rem; max-width: 650px; margin: 0 auto; color: #E2E8F0;">We would love to hear from you. Reach out to partner, volunteer, or inquire about our programs.</p>
     </section>
 
     <!-- Main Content Area -->
@@ -106,21 +132,20 @@
             
             <div class="info-item">
                 <strong>Location:</strong>
-                <span>Sege-Ada,Ghana</span>
+                <span>Sege-Ada, Greater Accra Region, Ghana</span>
             </div>
             <div class="info-item">
-                <strong>Email Address:</strong>
-                <span><a href="">info@doxazofoundation.org</a></span>
-            </div>
+    <strong>Email Address:</strong>
+    <span><a href="mailto:info@doxazofoundation.org">info@doxazofoundation.org</a></span>
+</div>
             <div class="info-item">
                 <strong>Phone Number:</strong>
-                <span>+233 247-64-2733</span>
+                <span><a href="tel:+233247642733">+233 247-64-2733</a></span>
             </div>
             <div class="info-item">
                 <strong>Office Hours:</strong>
-                <span>Monday - Friday: 8:00 AM - 5:00 PM</span> <br>
-                <span>Saturdays - 8:00 AM - 1:00 PM
-                </span>
+                <span>Monday - Friday: 8:00 AM - 5:00 PM</span>
+                <span>Saturdays: 8:00 AM - 1:00 PM</span>
             </div>
         </div>
 
@@ -130,11 +155,11 @@
             <form action="#" method="POST">
                 <div class="form-group">
                     <label for="name">Your Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
                 </div>
                 <div class="form-group">
                     <label for="subject">Subject / Inquiry Type</label>
@@ -144,36 +169,65 @@
                     <label for="message">Your Message</label>
                     <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
                 </div>
-                <button type="submit" class="btn-primary" style="width: 100%; text-align: center; border: none; cursor: pointer;">Send Message</button>
+                <button type="submit" class="btn-primary" style="width: 100%; text-align: center; border: none; cursor: pointer; padding: 0.9rem; font-size: 1rem; border-radius: 6px;">Send Message</button>
             </form>
         </div>
 
     </div>
-<script src="script.js"></script>
 
- <!-- Social Links -->
-    <div style="margin-bottom: 1.2rem; display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
-        <a href="https://facebook.com/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">Facebook</a>
-        <a href="https://instagram.com/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">Instagram</a>
-        <a href="https://twitter.com/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">Twitter / X</a>
-        <a href="https://linkedin.com/company/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">LinkedIn</a>
-   <a href="https://TikTok.com/company/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">TikTok</a>
-    </div>
-    </div>
- <!-- QR Code Placeholder -->
-    <div>
-        <img src="./df whatsapp.JPG" alt="Doxazo Social QR Code" style="width: 80px; height: 80px; border: 2px solid #D4AF37; border-radius: 6px; padding: 3px; background: #fff;">
-        <p style="font-size: 0.8rem; color: #666; margin-top: 0.4rem;">Scan to visit our channels</p>
+    <!-- Connect & Scan Section -->
+    <div style="text-align: center; margin: 4rem auto 2rem auto; padding: 2rem; background: rgba(212,175,55,0.05); border-radius: 8px; max-width: 600px;">
+        <p style="color: #D4AF37; font-weight: bold; margin-bottom: 1rem; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Connect & Scan With Us</p>
+        
+        <!-- Social Links -->
+        <div style="margin-bottom: 1.5rem; display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
+            <a href="https://facebook.com/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">Facebook</a>
+            <a href="https://linkedin.com/company/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">LinkedIn</a>
+            <a href="https://TikTok.com/company/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">TikTok</a>
+        </div>
+        
+        <!-- QR Code Placeholder -->
+        <div>
+            <img src="./df whatsapp.JPG" alt="Doxazo Social QR Code" style="width: 80px; height: 80px; border: 2px solid #D4AF37; border-radius: 6px; padding: 3px; background: #fff;">
+            <p style="font-size: 0.8rem; color: #666; margin-top: 0.4rem;">Scan to visit our channels</p>
+        </div>
     </div>
 
-</div>
+    <!-- Sponsors & Partners Linear Motion Section -->
+    <section class="partners-section">
+        <div class="partners-header">
+            <h3>Our Trusted <span>Sponsors & Partners</span></h3>
+            <p style="color: #666; font-size: 0.95rem; margin-top: 0.4rem;">Collaborating to build lasting community transformation.</p>
+        </div>
 
-<footer style="background-color: #0A1128; color: #E2E8F0; text-align: center; padding: 2rem; border-top: 3px solid #D4AF37; margin-top: 4rem;">
-    <p style="margin-bottom: 0.8rem; font-size: 0.95rem;">
-        <a href="legal.html" style="color: #D4AF37; text-decoration: none; margin: 0 10px;">Legal</a> | 
-        <a href="terms.html" style="color: #D4AF37; text-decoration: none; margin: 0 10px;">Terms of Service</a>
-    </p>
-    <p style="font-size: 0.85rem; color: #94A3B8;">&copy; 2026 Doxazo Foundation. All rights reserved.</p>
-</footer>
+        <div class="slider-container">
+            <div class="slider-track">
+                <!-- Set 1 of Partners -->
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 1]</span></div>
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 2]</span></div>
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 3]</span></div>
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 4]</span></div>
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 5]</span></div>
+
+                <!-- Set 2 (Duplicate for infinite looping) -->
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 1]</span></div>
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 2]</span></div>
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 3]</span></div>
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 4]</span></div>
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 5]</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background-color: #0A1128; color: #E2E8F0; text-align: center; padding: 2rem; border-top: 3px solid #D4AF37; margin-top: 4rem;">
+        <p style="margin-bottom: 0.8rem; font-size: 0.95rem;">
+            <a href="legal.html" style="color: #D4AF37; text-decoration: none; margin: 0 10px;">Legal</a> | 
+            <a href="terms.html" style="color: #D4AF37; text-decoration: none; margin: 0 10px;">Terms of Service</a>
+        </p>
+        <p style="font-size: 0.85rem; color: #94A3B8;">&copy; 2026 Doxazo Foundation. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
