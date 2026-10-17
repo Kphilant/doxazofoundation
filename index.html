@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doxazo Foundation — Transforming Lives & Communities</title>
+    <title>Doxazo Foundation</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="favicon.png.jpg">
     <style>
         /* Homepage Specific Enhancements */
         .hero-section {
-            background: linear-gradient(rgba(10, 17, 40, 0.85), rgba(10, 17, 40, 0.85)), url('https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&w=1200&q=80');
+            background: linear-gradient(rgba(84, 75, 9, 0.85), rgba(2, 19, 75, 0.85)), url('https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&w=1200&q=80');
             background-size: cover;
             background-position: center;
             color: var(--white);
@@ -167,12 +167,12 @@
 
     <!-- Navigation Bar -->
     <header>
-        <div class="nav-container">
+        <div class="nav-container" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem;">
             <div style="display: flex; align-items: center; gap: 10px;">
-    <img src="./favicon.png.jpg" alt="Doxazo Logo" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 2px solid #D4AF37;">
-    <span class="logo">DOXAZO FOUNDATION</span>
-</div>
-            <ul class="nav-links">
+                <img src="./favicon.png.jpg" alt="Doxazo Logo" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 2px solid #D4AF37;">
+                <span class="logo" style="font-weight: bold; color: var(--white);">DOXAZO FOUNDATION</span>
+            </div>
+            <ul class="nav-links" style="display: flex; gap: 1.5rem; list-style: none; align-items: center;">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="programs.html">Programs & Mandates</a></li>
@@ -196,11 +196,11 @@
     <!-- Floating Stats Bar -->
     <div class="stats-bar">
         <div class="stat-box">
-            <h3 class="counter" data-target="500">0+</h3>
+            <h3 class="counter" data-target="0">0</h3>
             <p>Students Supported</p>
         </div>
         <div class="stat-box">
-            <h3 class="counter" data-target="15">0+</h3>
+            <h3 class="counter" data-target="2">0</h3>
             <p>Communities Reached</p>
         </div>
         <div class="stat-box">
@@ -258,6 +258,59 @@
 
     </div>
 
+    <!-- Connect & Scan Section -->
+    <div style="text-align: center; margin: 3rem auto; padding: 2rem; background: rgba(212,175,55,0.05); border-radius: 8px; max-width: 600px;">
+        <p style="color: #D4AF37; font-weight: bold; margin-bottom: 1rem; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Connect & Scan With Us</p>
+        
+        <!-- Social Links -->
+        <div style="margin-bottom: 1.5rem; display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
+            <a href="https://facebook.com/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">Facebook</a>
+            <a href="https://linkedin.com/company/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">LinkedIn</a>
+            <a href="https://TikTok.com/company/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">TikTok</a>
+        </div>
+        
+        <!-- QR Code Placeholder -->
+        <div>
+            <img src="./df whatsapp.JPG" alt="Doxazo Social QR Code" style="width: 80px; height: 80px; border: 2px solid #D4AF37; border-radius: 6px; padding: 3px; background: #fff;">
+            <p style="font-size: 0.8rem; color: #666; margin-top: 0.4rem;">Scan to visit our channels</p>
+        </div>
+    </div>
+
+<!-- Sponsors & Partners Linear Motion Section -->
+    <section class="partners-section">
+        <div class="partners-header">
+            <h3>Our Trusted <span>Sponsors & Partners</span></h3>
+            <p style="color: #666; font-size: 0.95rem; margin-top: 0.4rem;">Collaborating to build lasting community transformation.</p>
+        </div>
+
+        <div class="slider-container">
+            <div class="slider-track">
+                <!-- Set 1 of Partners -->
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 1]</span></div>
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 2]</span></div>
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 3]</span></div>
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 4]</span></div>
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 5]</span></div>
+
+                <!-- Set 2 (Duplicate for infinite looping) -->
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 1]</span></div>
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 2]</span></div>
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 3]</span></div>
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 4]</span></div>
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 5]</span></div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer style="background-color: #0A1128; color: #E2E8F0; text-align: center; padding: 2rem; border-top: 3px solid #D4AF37; margin-top: 4rem;">
+        <p style="margin-bottom: 0.8rem; font-size: 0.95rem;">
+            <a href="legal.html" style="color: #D4AF37; text-decoration: none; margin: 0 10px;">Legal</a> | 
+            <a href="terms.html" style="color: #D4AF37; text-decoration: none; margin: 0 10px;">Terms of Service</a>
+        </p>
+        <p style="font-size: 0.85rem; color: #94A3B8;">&copy; 2026 Doxazo Foundation. All rights reserved.</p>
+    </footer>
+
     <!-- Auto-Counting Script -->
     <script>
         const counters = document.querySelectorAll('.counter');
@@ -276,35 +329,6 @@
             updateCount();
         });
     </script>
-<script src="script.js"></script>
-
-<div style="text-align: center; margin: 2rem 0; padding: 1.5rem; background: rgba(212,175,55,0.05); border-radius: 8px;">
-    <p style="color: #D4AF37; font-weight: bold; margin-bottom: 1rem; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Connect & Scan With Us</p>
-    
-    <!-- Social Links -->
-    <div style="margin-bottom: 1.2rem; display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
-        <a href="https://facebook.com/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">Facebook</a>
-        <a href="https://instagram.com/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">Instagram</a>
-        <a href="https://twitter.com/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">Twitter / X</a>
-        <a href="https://linkedin.com/company/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">LinkedIn</a>
-   <a href="https://TikTok.com/company/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">TikTok</a>
-    </div>
-    </div>
- <!-- QR Code Placeholder -->
-    <div>
-        <img src="./df whatsapp.JPG" alt="Doxazo Social QR Code" style="width: 80px; height: 80px; border: 2px solid #D4AF37; border-radius: 6px; padding: 3px; background: #fff;">
-        <p style="font-size: 0.8rem; color: #666; margin-top: 0.4rem;">Scan to visit our channels</p>
-    </div>
-
-</div>
-
-
-<footer style="background-color: #0A1128; color: #E2E8F0; text-align: center; padding: 2rem; border-top: 3px solid #D4AF37; margin-top: 4rem;">
-    <p style="margin-bottom: 0.8rem; font-size: 0.95rem;">
-        <a href="legal.html" style="color: #D4AF37; text-decoration: none; margin: 0 10px;">Legal</a> | 
-        <a href="terms.html" style="color: #D4AF37; text-decoration: none; margin: 0 10px;">Terms of Service</a>
-    </p>
-    <p style="font-size: 0.85rem; color: #94A3B8;">&copy; 2026 Doxazo Foundation. All rights reserved.</p>
-</footer>
+    <script src="script.js"></script>
 </body>
 </html>
