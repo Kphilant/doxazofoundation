@@ -154,3 +154,80 @@ header {
         font-size: 2.2rem;
     }
 }
+/* --- SMOOTH LINEAR MOTION (LEFT TO RIGHT) --- */
+        .partners-section {
+            padding: 4rem 0;
+            background: #f8fafc;
+            overflow: hidden;
+            border-top: 1px solid #e2e8f0;
+            border-bottom: 1px solid #e2e8f0;
+            margin: 4rem 0;
+            width: 100%;
+        }
+        .partners-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+        .partners-header h3 {
+            color: var(--primary-blue);
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        .partners-header h3 span {
+            color: var(--accent-gold);
+        }
+        .slider-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+        .slider-track {
+            display: flex;
+            gap: 3rem;
+            width: max-content;
+            /* Linear motion moving left-to-right */
+            animation: scrollLeftToRight 25s linear infinite;
+        }
+        .slider-track:hover {
+            animation-play-state: paused; /* Pauses when you hover your mouse over it */
+        }
+        .partner-card {
+            background: var(--white);
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+            border: 1px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 180px;
+            height: 90px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .partner-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-gold);
+        }
+        .partner-card img {
+            max-height: 50px;
+            max-width: 130px;
+            object-fit: contain;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: filter 0.3s ease, opacity 0.3s ease;
+        }
+        .partner-card:hover img {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+
+        @keyframes scrollLeftToRight {
+            0% {
+                transform: translateX(-50%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
