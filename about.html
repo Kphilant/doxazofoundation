@@ -73,13 +73,13 @@
 
         /* Leadership Section */
         .leadership-section {
-            text-align: center;
             margin-bottom: 4rem;
         }
         .leadership-section h2 {
             color: var(--primary-blue);
             font-size: 2.2rem;
             margin-bottom: 1rem;
+            text-align: center;
         }
         .leadership-section h2 span {
             color: var(--accent-gold);
@@ -89,10 +89,11 @@
             max-width: 650px;
             margin: 0 auto 3rem auto;
             font-size: 1.05rem;
+            text-align: center;
         }
         .team-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
         .team-card {
@@ -102,20 +103,9 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             border-top: 4px solid var(--accent-gold);
             text-align: center;
-        }
-        .team-avatar {
-            width: 90px;
-            height: 90px;
-            background-color: var(--primary-blue);
-            color: var(--accent-gold);
-            font-size: 2rem;
-            font-weight: bold;
             display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            margin: 0 auto 1.2rem auto;
-            border: 2px solid var(--accent-gold);
+            flex-direction: column;
+            justify-content: space-between;
         }
         .team-card h3 {
             color: var(--primary-blue);
@@ -125,13 +115,14 @@
         .team-card .role {
             color: var(--accent-gold);
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             margin-bottom: 0.8rem;
             text-transform: uppercase;
         }
         .team-card p {
             color: #666;
             font-size: 0.9rem;
+            line-height: 1.6;
         }
     </style>
 </head>
@@ -139,13 +130,12 @@
 
     <!-- Navigation Bar -->
     <header>
-        <div class="nav-container">
-             <div class="nav-container">
-            <div style="display: flex; align-items:initial; gap: 10px;">
-    <img src="./favicon.png.jpg" alt="Doxazo Logo" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 2px solid #D4AF37;">
-    <span class="logo">DOXAZO FOUNDATION</span>
-</div>
-            <ul class="nav-links">
+        <div class="nav-container" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="./favicon.png.jpg" alt="Doxazo Logo" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 2px solid #D4AF37;">
+                <span class="logo" style="font-weight: bold; color: #D4AF37; font-size: 1.1rem; letter-spacing: 0.5px;">DOXAZO FOUNDATION</span>
+            </div>
+            <ul class="nav-links" style="display: flex; gap: 1.5rem; list-style: none; align-items: center;">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="programs.html">Programs & Mandates</a></li>
@@ -157,9 +147,9 @@
     </header>
 
     <!-- Page Header -->
-    <section class="page-header">
-        <h1>About Doxazo Foundation</h1>
-        <p>Discover our history, our driving mission, and the dedicated team behind our community transformations.</p>
+    <section class="page-header" style="background: linear-gradient(rgba(10, 17, 40, 0.85), rgba(10, 17, 40, 0.85)), url('https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; color: white; text-align: center; padding: 5rem 2rem; border-bottom: 4px solid #D4AF37;">
+        <h1 style="font-size: 2.8rem; color: #D4AF37; margin-bottom: 1rem;">About Doxazo Foundation</h1>
+        <p style="font-size: 1.15rem; max-width: 650px; margin: 0 auto; color: #E2E8F0;">Discover our history, our driving mission, and the dedicated team behind our community transformations.</p>
     </section>
 
     <!-- Main Content Area -->
@@ -190,164 +180,194 @@
         </div>
 
         <!-- Leadership Section -->
-        <div class="team-card">
-    <div style="width: 110px; height: 110px; margin: 0 auto 1.2rem auto; border-radius: 50%; overflow: hidden; border: 3px solid var(--accent-gold); box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-        <img src="./df prez.png" alt="Leader Name" style="width: 100%; height: 100%; object-fit: cover;">
-    </div>
-    <h3>David Sapatey</h3>
-    <div class="role">PRESIDENT AND EXECUTIVE MEMBER</div>
-    <p> Provides visionary leadership and strategic 
-direction to drive the foundation's core mission and long-term objectives. 
-Represents the organization at the highest levels,
- fostering crucial partnerships and guiding overall
-  executive governance. Collaborates with leadership to formulate 
-  foundational policies, oversee strategic initiatives, and ensure 
-  institutional growth. Contributes governance expertise and active 
-  oversight across key operational departments to maximize organizational impact. </p>
-    <div class="team-card">
-    <div style="width: 110px; height: 110px; margin: 0 auto 1.2rem auto; border-radius: 50%; overflow: hidden; border: 3px solid var(--accent-gold); box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-        <img src="./df pro.png" alt="Leader Name" style="width: 100%; height: 100%; object-fit: cover;">
-    </div>
-    <h3>Joseph Akrofi Ocansey</h3>
-    <div class="role">PUBLIC RELATIONS OFFICER AND SCHOLARSHIP COORINATOR </div>
-    <p>Develops and executes comprehensive communication strategies to
-        enhance the foundation’s public image and brand visibility. Manages media relations, digital content, 
-        and public outreach to effectively tell our story of impact.
-Manages the entire lifecycle of educational grants, from application 
-intake and rigorous vetting to selection and disbursement. 
-Serves as the primary liaison between the foundation, 
-sponsored students, and partner educational institutions.</p>
-    <div class="team-card">
-    <div style="width: 110px; height: 110px; margin: 0 auto 1.2rem auto; border-radius: 50%; overflow: hidden; border: 3px solid var(--accent-gold); box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-        <img src="./df protocol copy.png" alt="Leader Name" style="width: 100%; height: 100%; object-fit: cover;">
-    </div>
-    <h3>Faustina Ofosu Appiah</h3>
-    <div class="role">HEAD OF PROTOCOL AND TREASURER</div>
-    <p>Manages executive schedules, VIP relations, advancement
-         high-level stakeholder engagements with strict discretion. 
-         Coordinates seamless protocol and
-         logistical execution for all major foundation events and meetings.
-Oversees the foundation's financial health, ensuring transparency,
- accuracy, and regulatory compliance in all accounting matters.
-  Manages budgeting, grant disbursement, and financial reporting 
-  to the Executive Board and donors.</p>
-    <div class="team-card">
-    <div style="width: 110px; height: 110px; margin: 0 auto 1.2rem auto; border-radius: 50%; overflow: hidden; border: 3px solid var(--accent-gold); box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-        <img src="./df sec.png" alt="Leader Name" style="width: 100%; height: 100%; object-fit: cover;">
-    </div>
-    <h3>Servant DA Prosper</h3>
-    <div class="role">GENERAL SECRETARY </div>
-    <p>Manages the foundational administration, official correspondence,
-         and comprehensive record-keeping for the executive board. Ensures 
-         seamless communication across all departments and 
-        supports strategic planning and meeting coordination.</p>
-    <div class="team-card">
-    <div style="width: 110px; height: 110px; margin: 0 auto 1.2rem auto; border-radius: 50%; overflow: hidden; border: 3px solid var(--accent-gold); box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-        <img src="./df program.png" alt="Leader Name" style="width: 100%; height: 100%; object-fit: cover;">
-    </div>
-    <h3>Cephas Ocansey</h3>
-    <div class="role">ORGANIZER AND PROGRAM COORDINATOR</div>
-    <p>Coordinates the seamless logistical planning and execution of all
- foundation field activities, community outreaches, and special events. 
- Manages ground-level operations, equipment setup, 
-and volunteer deployment to ensure every program runs efficiently.
-Designs, implements, and evaluates the foundation's core initiatives, 
-aligning them with our strategic vision and mission. Oversees daily program
-activities, tracks impact metrics, and fosters collaborative partnerships 
-to maximize community benefit.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
+        <div class="leadership-section">
+            <h2>Executive <span>Leadership</span></h2>
+            <p>Meet the dedicated leaders guiding our strategy, governance, and community programs.</p>
+            
+            <div class="team-grid">
+                
+                <!-- President -->
+                <div class="team-card">
+                    <div>
+                        <div style="width: 110px; height: 110px; margin: 0 auto 1.2rem auto; border-radius: 50%; overflow: hidden; border: 3px solid var(--accent-gold); box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                            <img src="./df prez.png" alt="David Sapatey" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <h3>David Sapatey</h3>
+                        <div class="role">President and Executive Member</div>
+                        <p>Provides visionary leadership and strategic direction to drive the foundation's core mission and long-term objectives. Represents the organization at the highest levels, fostering crucial partnerships and guiding overall executive governance.</p>
+                    </div>
+                </div>
 
-<div style="max-width: 600px; margin: 3rem auto; padding: 0 1rem; text-align: center;">
-    <h2 style="color: #0A1128; font-size: 1.8rem; margin-bottom: 2rem;">Founding <span style="color: #D4AF37;">Members</span></h2>
-    
-    <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                <!-- PRO & Scholarship Coordinator -->
+                <div class="team-card">
+                    <div>
+                        <div style="width: 110px; height: 110px; margin: 0 auto 1.2rem auto; border-radius: 50%; overflow: hidden; border: 3px solid var(--accent-gold); box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                            <img src="./df pro.png" alt="Joseph Akrofi Ocansey" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <h3>Joseph Akrofi Ocansey</h3>
+                        <div class="role">Public Relations Officer & Scholarship Coordinator</div>
+                        <p>Develops communication strategies to enhance public image and manages the entire lifecycle of educational grants, serving as the primary liaison between the foundation and sponsored students.</p>
+                    </div>
+                </div>
+
+                <!-- Head of Protocol & Treasurer -->
+                <div class="team-card">
+                    <div>
+                        <div style="width: 110px; height: 110px; margin: 0 auto 1.2rem auto; border-radius: 50%; overflow: hidden; border: 3px solid var(--accent-gold); box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                            <img src="./df protocol copy.png" alt="Faustina Ofosu Appiah" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <h3>Faustina Ofosu Appiah</h3>
+                        <div class="role">Head of Protocol and Treasurer</div>
+                        <p>Manages executive schedules, stakeholder engagements, and protocol execution for events while overseeing financial health, budgeting, transparency, and regulatory compliance.</p>
+                    </div>
+                </div>
+
+                <!-- General Secretary -->
+                <div class="team-card">
+                    <div>
+                        <div style="width: 110px; height: 110px; margin: 0 auto 1.2rem auto; border-radius: 50%; overflow: hidden; border: 3px solid var(--accent-gold); box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                            <img src="./df sec.png" alt="Servant DA Prosper" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <h3>Servant DA Prosper</h3>
+                        <div class="role">General Secretary</div>
+                        <p>Manages foundational administration, official correspondence, and comprehensive record-keeping for the executive board while ensuring seamless cross-departmental communication.</p>
+                    </div>
+                </div>
+
+                <!-- Organizer & Program Coordinator -->
+                <div class="team-card">
+                    <div>
+                        <div style="width: 110px; height: 110px; margin: 0 auto 1.2rem auto; border-radius: 50%; overflow: hidden; border: 3px solid var(--accent-gold); box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                            <img src="./df program.png" alt="Cephas Ocansey" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <h3>Cephas Ocansey</h3>
+                        <div class="role">Organizer and Program Coordinator</div>
+                        <p>Coordinates logistical planning and execution of all foundation field activities, community outreaches, and special events, tracking impact metrics to maximize community benefit.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Founding Members Section -->
+        <div style="margin: 5rem 0 3rem 0; text-align: center;">
+            <h2 style="color: #0A1128; font-size: 2.2rem; margin-bottom: 1rem;">Founding <span style="color: #D4AF37;">Members</span></h2>
+            <p style="color: #666; margin-bottom: 3rem; font-size: 1.05rem;">The visionaries who laid the groundwork for Doxazo Foundation.</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+                
+                <!-- Member 1 -->
+                <div style="background: #ffffff; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-bottom: 3px solid #D4AF37; text-align: center;">
+                    <div style="width: 90px; height: 90px; margin: 0 auto 0.8rem auto; border-radius: 50%; overflow: hidden; border: 2px solid #D4AF37;">
+                        <img src="founder1.jpg" alt="Founding Member Name" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <h4 style="color: #0A1128; font-size: 1rem; margin-bottom: 0.3rem;">[Member's Name]</h4>
+                    <p style="color: #D4AF37; font-size: 0.85rem; font-weight: 600; margin: 0;">Co-Founder</p>
+                </div>
+
+                <!-- Member 2 -->
+                <div style="background: #ffffff; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-bottom: 3px solid #D4AF37; text-align: center;">
+                    <div style="width: 90px; height: 90px; margin: 0 auto 0.8rem auto; border-radius: 50%; overflow: hidden; border: 2px solid #D4AF37;">
+                        <img src="founder2.jpg" alt="Founding Member Name" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <h4 style="color: #0A1128; font-size: 1rem; margin-bottom: 0.3rem;">[Member's Name]</h4>
+                    <p style="color: #D4AF37; font-size: 0.85rem; font-weight: 600; margin: 0;">Co-Founder / Board Member</p>
+                </div>
+
+                <!-- Member 3 -->
+                <div style="background: #ffffff; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-bottom: 3px solid #D4AF37; text-align: center;">
+                    <div style="width: 90px; height: 90px; margin: 0 auto 0.8rem auto; border-radius: 50%; overflow: hidden; border: 2px solid #D4AF37;">
+                        <img src="founder2.jpg" alt="Founding Member Name" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <h4 style="color: #0A1128; font-size: 1rem; margin-bottom: 0.3rem;">[Member's Name]</h4>
+                    <p style="color: #D4AF37; font-size: 0.85rem; font-weight: 600; margin: 0;">Co-Founder / Board Member</p>
+                </div>
+
+                <!-- Member 4 -->
+                <div style="background: #ffffff; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-bottom: 3px solid #D4AF37; text-align: center;">
+                    <div style="width: 90px; height: 90px; margin: 0 auto 0.8rem auto; border-radius: 50%; overflow: hidden; border: 2px solid #D4AF37;">
+                        <img src="founder2.jpg" alt="Founding Member Name" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <h4 style="color: #0A1128; font-size: 1rem; margin-bottom: 0.3rem;">[Member's Name]</h4>
+                    <p style="color: #D4AF37; font-size: 0.85rem; font-weight: 600; margin: 0;">Co-Founder / Board Member</p>
+                </div>
+
+                <!-- Member 5 -->
+                <div style="background: #ffffff; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-bottom: 3px solid #D4AF37; text-align: center;">
+                    <div style="width: 90px; height: 90px; margin: 0 auto 0.8rem auto; border-radius: 50%; overflow: hidden; border: 2px solid #D4AF37;">
+                        <img src="founder2.jpg" alt="Founding Member Name" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <h4 style="color: #0A1128; font-size: 1rem; margin-bottom: 0.3rem;">[Member's Name]</h4>
+                    <p style="color: #D4AF37; font-size: 0.85rem; font-weight: 600; margin: 0;">Co-Founder / Board Member</p>
+                </div>
+
+                <!-- Member 6 -->
+                <div style="background: #ffffff; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-bottom: 3px solid #D4AF37; text-align: center;">
+                    <div style="width: 90px; height: 90px; margin: 0 auto 0.8rem auto; border-radius: 50%; overflow: hidden; border: 2px solid #D4AF37;">
+                        <img src="founder2.jpg" alt="Founding Member Name" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <h4 style="color: #0A1128; font-size: 1rem; margin-bottom: 0.3rem;">[Member's Name]</h4>
+                    <p style="color: #D4AF37; font-size: 0.85rem; font-weight: 600; margin: 0;">Co-Founder / Board Member</p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Connect & Scan Section -->
+    <div style="text-align: center; margin: 3rem auto; padding: 2rem; background: rgba(212,175,55,0.05); border-radius: 8px; max-width: 600px;">
+        <p style="color: #D4AF37; font-weight: bold; margin-bottom: 1rem; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Connect & Scan With Us</p>
         
-        <!-- Member 1 -->
-        <div style="flex: 1; min-width: 180px; max-width: 220px; background: #ffffff; padding: 1.2rem; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-bottom: 3px solid #D4AF37;">
-            <div style="width: 90px; height: 90px; margin: 0 auto 0.8rem auto; border-radius: 50%; overflow: hidden; border: 2px solid #D4AF37;">
-                <img src="founder1.jpg" alt="Founding Member Name" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <h4 style="color: #0A1128; font-size: 1rem; margin-bottom: 0.3rem;">[Member's Name]</h4>
-            <p style="color: #D4AF37; font-size: 0.85rem; font-weight: 600; margin: 0;">Co-Founder</p>
+        <!-- Social Links -->
+        <div style="margin-bottom: 1.5rem; display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
+            <a href="https://facebook.com/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">Facebook</a>
+            <a href="https://linkedin.com/company/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">LinkedIn</a>
+            <a href="https://TikTok.com/company/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">TikTok</a>
         </div>
-
-        <!-- Member 2 -->
-        <div style="flex: 1; min-width: 180px; max-width: 220px; background: #ffffff; padding: 1.2rem; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-bottom: 3px solid #D4AF37;">
-            <div style="width: 90px; height: 90px; margin: 0 auto 0.8rem auto; border-radius: 50%; overflow: hidden; border: 2px solid #D4AF37;">
-                <img src="founder2.jpg" alt="Founding Member Name" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <h4 style="color: #0A1128; font-size: 1rem; margin-bottom: 0.3rem;">[Member's Name]</h4>
-            <p style="color: #D4AF37; font-size: 0.85rem; font-weight: 600; margin: 0;">Co-Founder / Board Member</p>
+        
+        <!-- QR Code Placeholder -->
+        <div>
+            <img src="./df whatsapp.JPG" alt="Doxazo Social QR Code" style="width: 80px; height: 80px; border: 2px solid #D4AF37; border-radius: 6px; padding: 3px; background: #fff;">
+            <p style="font-size: 0.8rem; color: #666; margin-top: 0.4rem;">Scan to visit our channels</p>
         </div>
-
-         <!-- Member 3 -->
-        <div style="flex: 1; min-width: 180px; max-width: 220px; background: #ffffff; padding: 1.2rem; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-bottom: 3px solid #D4AF37;">
-            <div style="width: 90px; height: 90px; margin: 0 auto 0.8rem auto; border-radius: 50%; overflow: hidden; border: 2px solid #D4AF37;">
-                <img src="founder2.jpg" alt="Founding Member Name" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <h4 style="color: #0A1128; font-size: 1rem; margin-bottom: 0.3rem;">[Member's Name]</h4>
-            <p style="color: #D4AF37; font-size: 0.85rem; font-weight: 600; margin: 0;">Co-Founder / Board Member</p>
-        </div>
-
-         <!-- Member 4 -->
-        <div style="flex: 1; min-width: 180px; max-width: 220px; background: #ffffff; padding: 1.2rem; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-bottom: 3px solid #D4AF37;">
-            <div style="width: 90px; height: 90px; margin: 0 auto 0.8rem auto; border-radius: 50%; overflow: hidden; border: 2px solid #D4AF37;">
-                <img src="founder2.jpg" alt="Founding Member Name" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <h4 style="color: #0A1128; font-size: 1rem; margin-bottom: 0.3rem;">[Member's Name]</h4>
-            <p style="color: #D4AF37; font-size: 0.85rem; font-weight: 600; margin: 0;">Co-Founder / Board Member</p>
-        </div>
- <!-- Member 5 -->
-        <div style="flex: 1; min-width: 180px; max-width: 220px; background: #ffffff; padding: 1.2rem; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-bottom: 3px solid #D4AF37;">
-            <div style="width: 90px; height: 90px; margin: 0 auto 0.8rem auto; border-radius: 50%; overflow: hidden; border: 2px solid #D4AF37;">
-                <img src="founder2.jpg" alt="Founding Member Name" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <h4 style="color: #0A1128; font-size: 1rem; margin-bottom: 0.3rem;">[Member's Name]</h4>
-            <p style="color: #D4AF37; font-size: 0.85rem; font-weight: 600; margin: 0;">Co-Founder / Board Member</p>
-        </div>
-
-         <!-- Member 6 -->
-        <div style="flex: 1; min-width: 180px; max-width: 220px; background: #ffffff; padding: 1.2rem; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-bottom: 3px solid #D4AF37;">
-            <div style="width: 90px; height: 90px; margin: 0 auto 0.8rem auto; border-radius: 50%; overflow: hidden; border: 2px solid #D4AF37;">
-                <img src="founder2.jpg" alt="Founding Member Name" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <h4 style="color: #0A1128; font-size: 1rem; margin-bottom: 0.3rem;">[Member's Name]</h4>
-            <p style="color: #D4AF37; font-size: 0.85rem; font-weight: 600; margin: 0;">Co-Founder / Board Member</p>
-        </div>
-
-    </div>
-    
-</div>
-
- <!-- Social Links -->
-    <div style="margin-bottom: 1.2rem; display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
-        <a href="https://facebook.com/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">Facebook</a>
-        <a href="https://instagram.com/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">Instagram</a>
-        <a href="https://twitter.com/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">Twitter / X</a>
-        <a href="https://linkedin.com/company/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">LinkedIn</a>
-   <a href="https://TikTok.com/company/yourprofile" target="_blank" style="color: #0A1128; font-weight: 600; text-decoration: none;">TikTok</a>
-    </div>
-    </div>
- <!-- QR Code Placeholder -->
-    <div>
-        <img src="./df whatsapp.JPG" alt="Doxazo Social QR Code" style="width: 80px; height: 80px; border: 2px solid #D4AF37; border-radius: 6px; padding: 3px; background: #fff;">
-        <p style="font-size: 0.8rem; color: #666; margin-top: 0.4rem;">Scan to visit our channels</p>
     </div>
 
-</div>
-    
-<script src="script.js"></script>
+    <!-- Sponsors & Partners Linear Motion Section -->
+    <section class="partners-section">
+        <div class="partners-header">
+            <h3>Our Trusted <span>Sponsors & Partners</span></h3>
+            <p style="color: #666; font-size: 0.95rem; margin-top: 0.4rem;">Collaborating to build lasting community transformation.</p>
+        </div>
 
-<footer style="background-color: #0A1128; color: #E2E8F0; text-align: center; padding: 2rem; border-top: 3px solid #D4AF37; margin-top: 4rem;">
-    <p style="margin-bottom: 0.8rem; font-size: 0.95rem;">
-        <a href="legal.html" style="color: #D4AF37; text-decoration: none; margin: 0 10px;">Legal</a> | 
-        <a href="terms.html" style="color: #D4AF37; text-decoration: none; margin: 0 10px;">Terms of Service</a>
-    </p>
-    <p style="font-size: 0.85rem; color: #94A3B8;">&copy; 2026 Doxazo Foundation. All rights reserved.</p>
-</footer>
+        <div class="slider-container">
+            <div class="slider-track">
+                <!-- Set 1 of Partners -->
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 1]</span></div>
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 2]</span></div>
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 3]</span></div>
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 4]</span></div>
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 5]</span></div>
+
+                <!-- Set 2 (Duplicate for infinite looping) -->
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 1]</span></div>
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 2]</span></div>
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 3]</span></div>
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 4]</span></div>
+                <div class="partner-card"><span style="color: var(--primary-blue); font-weight: 700;">[Partner 5]</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background-color: #0A1128; color: #E2E8F0; text-align: center; padding: 2rem; border-top: 3px solid #D4AF37; margin-top: 4rem;">
+        <p style="margin-bottom: 0.8rem; font-size: 0.95rem;">
+            <a href="legal.html" style="color: #D4AF37; text-decoration: none; margin: 0 10px;">Legal</a> | 
+            <a href="terms.html" style="color: #D4AF37; text-decoration: none; margin: 0 10px;">Terms of Service</a>
+        </p>
+        <p style="font-size: 0.85rem; color: #94A3B8;">&copy; 2026 Doxazo Foundation. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
